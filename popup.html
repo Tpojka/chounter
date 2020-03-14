@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chounter</title>
+    <style>
+        body {
+            margin-top: 5px;
+            min-width: 110px;
+        }
+        form label:first-child {
+            margin-top: 10px;
+        }
+        #pasted {
+            margin-top: 15px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <form>
+        <label for="pasted"><strong>Chounter</strong></label>
+        <textarea id="pasted" placeholder="Paste Text"></textarea>
+    </form>
+</div>
+<div>
+    <p>
+        <span><strong id="strong-count">0</strong></span>
+        <span><button id="clear">Clear</button></span>
+    </p>
+</div>
+<script src="./js/script.js"></script>
+</body>
+</html>
