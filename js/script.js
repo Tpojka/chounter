@@ -1,23 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
     const pasted = document.getElementById('pasted')
-    const strongCount = document.getElementById('strong-count')
-    strongCount.innerText = '0'
+    const charCount = document.getElementById('char-count')
 
-    pasted.focus()
+    let count = 0
 
-    document.getElementById('pasted').onkeyup = function () {
-        strongCount.innerText = pasted.value.length.toString()
+    const updateCount = () => {
+        count = pasted.value.length
+        charCount.innerText = count.toString()
     }
 
-    document.getElementById('pasted').onpaste = function (e) {
-        let current = pasted.value.length
-        current += (e.clipboardData || window.clipboardData).getData('text').length
-        strongCount.innerText = current.toString()
-    }
+    pasted.addEventListener('input', updateCount)
+    pasted.addEventListener('paste', (e) => {
+        setTimeout(() => updateCount(), 0)
+    })
+    pasted.addEventListener('keydown', () => {
+        setTimeout(() => updateCount(), 0)
+    })
 
-    document.getElementById('clear').onclick = function () {
+    document.getElementById('clear').addEventListener('click', () => {
         pasted.value = ''
-        strongCount.innerText = "0"
+        count = 0
+        charCount.innerText = '0'
         pasted.focus()
-    }
+    })
 })
