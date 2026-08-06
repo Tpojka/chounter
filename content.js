@@ -1,2 +1,2 @@
-console.log("It's working.")
+// Content script loaded successfully.
 
