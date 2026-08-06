@@ -5,31 +5,83 @@
     <title>Chounter</title>
     <style>
         body {
-            margin-top: 5px;
-            min-width: 110px;
-        }
-        form label:first-child {
-            margin-top: 10px;
-        }
-        #pasted {
-            margin-top: 15px;
+            margin: 0;
             padding: 10px;
+            min-width: 240px;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 14px;
+            color: #1a1a1a;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        h2 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        textarea {
+            width: 100%;
+            min-height: 80px;
+            padding: 8px;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 14px;
+            resize: vertical;
+        }
+        textarea:focus {
+            outline: none;
+            border-color: #0969da;
+            box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.15);
+        }
+        .footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid #d0d7de;
+        }
+        .count {
+            font-size: 14px;
+            color: #656d76;
+        }
+        .count strong {
+            color: #0969da;
+            font-size: 18px;
+            margin-right: 4px;
+        }
+        button {
+            padding: 4px 12px;
+            border: none;
+            border-radius: 6px;
+            background: #f0f3f5;
+            color: #1a1a1a;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #e1e4e8;
+        }
+        button:focus-visible {
+            outline: 2px solid #0969da;
+            outline-offset: 2px;
         }
     </style>
 </head>
 <body>
-<div>
-    <form>
-        <label for="pasted"><strong>Chounter</strong></label>
-        <textarea id="pasted" placeholder="Paste Text"></textarea>
-    </form>
-</div>
-<div>
-    <p>
-        <span><strong id="strong-count">0</strong></span>
-        <span><button id="clear">Clear</button></span>
-    </p>
-</div>
-<script src="./js/script.js"></script>
+    <div class="header">
+        <h2>Chounter</h2>
+    </div>
+    <textarea id="pasted" placeholder="Paste text here..."></textarea>
+    <div class="footer">
+        <span class="count"><strong id="char-count">0</strong> characters</span>
+        <button id="clear">Clear</button>
+    </div>
+    <script src="./js/script.js"></script>
 </body>
 </html>
