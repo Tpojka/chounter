@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <title>Chounter</title>
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="16" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3b8bff"/>
+      <stop offset="1" stop-color="#0550ae"/>
+    </linearGradient>
+    <mask id="cut" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+      <rect width="16" height="16" fill="#fff"/>
+      <path d="M2.5 11.5 L13.5 5.5" stroke="#000" stroke-width="3.4" stroke-linecap="round"/>
+    </mask>
+  </defs>
+  <rect width="16" height="16" rx="3.5" fill="url(#tile)"/>
+  <g fill="#fff" mask="url(#cut)">
+    <rect x="3" y="3" width="2" height="10" rx="1"/>
+    <rect x="6" y="3" width="2" height="10" rx="1"/>
+    <rect x="9" y="3" width="2" height="10" rx="1"/>
+    <rect x="12" y="3" width="2" height="10" rx="1"/>
+  </g>
+  <path d="M2.5 11.5 L13.5 5.5" stroke="#ffb020" stroke-width="2" stroke-linecap="round"/>
+</svg>
