@@ -33,6 +33,8 @@ for s in 16 32 48; do rsvg-convert -w $s -h $s icons/icon-small.svg -o icons/ico
 rsvg-convert -w 128 -h 128 icons/icon.svg -o icons/icon-128.png
 ```
 
+See [CHANGELOG.md](CHANGELOG.md) for release history.
+
 ## License
 
 Chounter is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT). License file is distributed within this repository.
