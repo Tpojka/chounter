@@ -2,25 +2,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const pasted = document.getElementById('pasted')
     const charCount = document.getElementById('char-count')
 
-    let count = 0
-
     const updateCount = () => {
-        count = pasted.value.length
-        charCount.innerText = count.toString()
+        charCount.textContent = pasted.value.length.toString()
     }
 
+    // "input" fires for typing, paste, cut, drag and drop, and undo/redo.
     pasted.addEventListener('input', updateCount)
-    pasted.addEventListener('paste', (e) => {
-        setTimeout(() => updateCount(), 0)
-    })
-    pasted.addEventListener('keydown', () => {
-        setTimeout(() => updateCount(), 0)
-    })
 
     document.getElementById('clear').addEventListener('click', () => {
         pasted.value = ''
-        count = 0
-        charCount.innerText = '0'
+        updateCount()
         pasted.focus()
     })
 })
