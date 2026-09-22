@@ -14,4 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCount()
         pasted.focus()
     })
+
+    pasted.focus()
 })
