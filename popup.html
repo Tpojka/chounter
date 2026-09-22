@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Chounter</title>
     <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
         body {
             margin: 0;
             padding: 10px;
@@ -24,6 +27,7 @@
             font-weight: 600;
         }
         textarea {
+            display: block;
             width: 100%;
             min-height: 80px;
             padding: 8px;
